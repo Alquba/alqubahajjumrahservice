@@ -2,51 +2,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&family=Kanit:wght@300&display=swap');
 
+
 *{
   scroll-behavior: smooth;
 }
 
 /* ------------------------- for poster --------------------------- */
-.poster{
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 20px; 
-  height: 100vh;
-  width: 100%;
-  background-color: rgba(0, 0, 0, .7);
+
+.posterIntro{
+  margin: none;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10000;
+  justify-content: space-around;
+  padding: 10px 20px;
+  background-color: whitesmoke;
+}
+.posterContent{
+  text-align: justify;
+  font-size: 30px;
+  margin-right: 10%;
+}
+.popupimage{
+  height: 400px;
+  width: 300px;
+}
+#poster{
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px gray;
   
 }
-.posterImage{
-  position: relative;
-  animation: popup ease-in-out .5s ;
-  /* z-index: 10000; */
-}
-#add{
-  color: rgb(254, 251, 251);
-   font-size: 20px; 
-   position: relative; 
-   top: -35%;
-    left: 28%; 
-    float:right; 
-    cursor: pointer;
-}
 
-@keyframes popup {
-  0%{
-    top:-10%
-  }
-  75%{
-    top: 15%;
-  }
-  100%{
-    top: 10%;
-  }
-}
+
 /* --------------------------------------------------------------- */
 #menuicon,#menuCloseicon{
   display: none;
@@ -295,9 +280,6 @@ video{
     margin: 10px;
     flex-grow: 1;
     z-index: 99;
-    animation:zoomIn;
-    animation-timeline: view();
-    animation-range: cover 0% cover 30%;
     
 }
 .seeMore{
@@ -319,13 +301,7 @@ video{
   color: blueviolet;
   border: 1px solid blueviolet;
 }
-@media screen and (max-width:700px){
-  .image > img{
-    animation: slideInRight;
-    animation-timeline: view();
-    animation-range: cover 0% cover 30%;
-  }
-}
+
 /* -------------------------------------------------------------------------------- */
 /* -------------------------------------for packeges----------------------------- */
 body{
@@ -478,26 +454,26 @@ pre{
 /* ---------------------------------------------------- */
 
 /* ------------------------- for poster ---------------- */
-.posterImage{
-   height: 350px;
-   width: 250px;
-}
-.poster{
-  width: 100%;
+
+
+.posterIntro{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  left: -10%;
 }
-#add{
-  color: rgb(254, 251, 251);
-   font-size: 20px; 
-   position: relative; 
-   top: -30%;
-    left: 73%; 
-    float:right; 
-    cursor: pointer;
+.posterContent{
+  font-size: 18px;
+  text-align: justify;
+  margin-bottom: 10%;
 }
+.popupimage{
+  height: 150px;
+  width: 120px;
+}
+
+
+
 /* ---------------------------------------------------- */
 /* ------------------------- for contact --------------- */
 .contact{
