@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="al quba hajj umrah service">
-    <meta name="description" content="alqubahajjumrahservice">
     <link rel="stylesheet" href="./index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Telugu:wght@600&family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="Yellow Simple Islamic At-Tauhid Mosque Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!--AOS animation-->
     <title>Q-HUS</title>
 
     <link
@@ -43,10 +43,15 @@
         </nav>
 
 </header>
-<div class="poster" >
-    <i class="fa fa-close" id="add" onclick="this.parentElement.style.display='none';" ></i>
-    <img class="posterImage" src="./poster1.jpg" alt="" height="500px" width="400px">  
-</div>
+
+    <!-- <div class="poster" >
+    <i class="fa fa-close" id="add" onclick="this.parentElement.style.display='none';"  anchor="posterimage"></i>
+    <img class="posterImage" src="./poster1.jpg" alt="" height="500px" width="400px" id="posterimage">  
+</div> -->
+
+
+
+
 <img src="./5409885.jpg" alt="" class="img">
 <!-- <video muted autoplay loop src="video.mp4" height="500px" width="100%"></video> -->
 <div class="slideBar">
@@ -55,12 +60,27 @@
     </div>
 </div>
 
+<div class="posterIntro">
+    <span class="posterContent">
+        Introducing our new Poster! Our Poster is designed to showcase our brand and provide you with all the information you need to get in touch with us.  We’ve also included our Phone numbers, for more infromation. We look forward to hearing from you soon!. We are organizing international standard Haj and Umrah tours for potential pilgrims. <br> 
+        Our Haj and Umrah tour packages are wholly inclusive and cater to the requirements of all types of pilgrims like young, old, middle aged and women.  
+    </span>
+    
+    <button popovertarget="poster"  data-aos="flip-right" data-aos-duration="1000" style="padding: none; outline: none; border: none;"><img src="./images/newposter.jpg" alt="" class="popupimage"></button>
+</div>
+
+
+    <img src="./images/newposter.jpg" alt="" height="400px" width="300px" id="poster" popover popovertargetaction="hide"> <!--pop up image-->
+    
+
+
+
 <div class="gallery">
     <center><h1 class="animate__animated Ghead">Our Gallery</h1></center>
     <div class="image">
-    <img src="./images/IMG-20231203-WA0007.jpg" alt="" class="animate__animated animate__delay-2s">
-    <img src="./images/IMG-20231203-WA0018.jpg" alt="" class="animate__animated  animate__delay-2s">
-    <img src="./images/IMG-20231203-WA0010.jpg" alt="" class="animate__animated  animate__delay-2s">
+    <img src="./images/IMG-20231203-WA0007.jpg" alt="" data-aos="zoom-in-up" data-aos-duration="1000">
+    <img src="./images/IMG-20231203-WA0018.jpg" alt="" data-aos="zoom-in-up" data-aos-duration="1400">
+    <img src="./images/IMG-20231203-WA0010.jpg" alt="" data-aos="zoom-in-up" data-aos-duration="1800">
     </div>
     <a href="./gallery.html" class="seeMore"> See More </a>
 </div>
@@ -126,8 +146,9 @@ copyright &copy; 2023 - 2024 Designed & Developed by Sai Akhilesh , Fazil</span>
     </div>
 </div>
 <script src="./script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-
+AOS.init();
 </script>
 </body>
 </html>
